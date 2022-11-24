@@ -1,12 +1,6 @@
 package com.ssafy.aejimeongji.domain.entity;
 
-<<<<<<< HEAD
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-=======
 import lombok.*;
->>>>>>> develop
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -20,34 +14,20 @@ public class Calendar extends BaseTimeEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-<<<<<<< HEAD
-    private String title;
-
-=======
->>>>>>> develop
     private String content;
 
     private LocalDate date;
 
-<<<<<<< HEAD
-=======
     private Boolean isActive;
 
     private Boolean isAlert;
 
     private Boolean isInjection = false;
 
->>>>>>> develop
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "dog_id")
     private Dog dog;
 
-<<<<<<< HEAD
-    public Calendar(String title, String content, LocalDate date) {
-        this.title = title;
-        this.content = content;
-        this.date = date;
-=======
     @Builder
     public Calendar(Dog dog, String content, LocalDate date, Boolean isActive, Boolean isAlert) {
         this.dog = dog;
@@ -75,6 +55,5 @@ public class Calendar extends BaseTimeEntity {
 
     public void setDog(Dog dog) {
         this.dog = dog;
->>>>>>> develop
     }
 }

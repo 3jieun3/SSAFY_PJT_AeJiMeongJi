@@ -1,20 +1,13 @@
 package com.ssafy.aejimeongji.domain.entity;
 
-<<<<<<< HEAD
-import lombok.AccessLevel;
-=======
 import com.ssafy.aejimeongji.domain.entity.image.GuideThumbnail;
 import lombok.AccessLevel;
 import lombok.Builder;
->>>>>>> develop
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-<<<<<<< HEAD
-=======
 import java.io.IOException;
->>>>>>> develop
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -31,9 +24,8 @@ public class GuideBook extends BaseTimeEntity {
 
     private String category;
 
-<<<<<<< HEAD
     private int dogAge;
-=======
+
     private int monthMin;
 
     private int monthMax;
@@ -71,5 +63,4 @@ public class GuideBook extends BaseTimeEntity {
     public void saveGuideThumbnail(GuideThumbnail thumbnail) {
         this.thumbnail = thumbnail;
     }
->>>>>>> develop
 }
